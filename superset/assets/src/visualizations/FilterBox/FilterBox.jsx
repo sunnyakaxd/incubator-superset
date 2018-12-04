@@ -181,6 +181,7 @@ class FilterBox extends React.Component {
       .filter(key => !selectedValues.hasOwnProperty(key)
         || !(key in filtersChoices))
       .forEach((key) => {
+        return;
         const choices = filtersChoices[key];
         const choiceIds = new Set(choices.map(f => f.id));
         selectedValues[key]
